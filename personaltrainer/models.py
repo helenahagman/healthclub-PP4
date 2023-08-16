@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.model import User
-from cloudinary.models import CloudinaryFeild
+from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, 'previous'), (1, 'Booked'))
 
@@ -20,3 +20,11 @@ class UserProfile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, null=True, blank=True)
 
+
+# class RegistrationForm(forms.ModelForm):
+#    class Meta:
+#        model = User
+#        fields = ['username', 'email', 'password']
+#        widgets = {
+#            'password': forms.PasswordInput(),
+#        }
