@@ -30,7 +30,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-helenahagman-healthclub-323qutztyz.us2.codeanyapp.com']
+ALLOWED_HOSTS = [
+    '8000-helenahagman-healthclub-323qutztyz.us2.codeanyapp.com',
+    '8000-helenahagman-healthclub-itqmukv6ac.us2.codeanyapp.com',
+]
 
 
 # Application definition
