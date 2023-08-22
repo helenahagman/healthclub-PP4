@@ -19,12 +19,3 @@ class BookingSession(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, null=True, blank=True)
-
-
-# class RegistrationForm(forms.ModelForm):
-#    class Meta:
-#        model = User
-#        fields = ['username', 'email', 'password']
-#        widgets = {
-#            'password': forms.PasswordInput(),
-#        }

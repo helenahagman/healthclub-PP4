@@ -1,6 +1,9 @@
+from django import forms
 from django.contrib import admin
 from .models import BookingSession, UserProfile
 from django_summernote.admin import SummernoteModelAdmin
+from django.contrib.auth.models import User
+from .forms import RegistrationForm
 
 
 @admin.register(BookingSession)
@@ -17,3 +20,5 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     list_display = ('user',)
     search_fields = ('user__username', 'user__email', 'user__phone_number',)
+
+    form = RegistrationForm
