@@ -1,7 +1,8 @@
 from django import forms
 from django.utils import timezone
 from django.contrib.auth.models import User
-from .models import BookingSession
+from django.contrib.auth.forms import UserCreationForm
+from .models import BookingSession, CustomUser
 
 
 class RegistrationForm(forms.ModelForm):
@@ -11,6 +12,15 @@ class RegistrationForm(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput(),
         }
+
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(
+        max_length=255, required=True, help_text='Enter a valid email')
+
+    class Meta:
+        model = CustomUser
+        fields = ('username', 'name', 'email',
+                  'phone_number', 'password1', 'password2')
 
 
 class BookingSessionForm(forms.ModelForm):
