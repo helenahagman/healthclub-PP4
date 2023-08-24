@@ -3,8 +3,11 @@ from django.contrib.auth import login, authenticate, get_user_model
 from django.http import HttpResponse
 from .forms import SignUpForm
 
+User = get_user_model()
 
 # authenicate and log in the user
+
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -18,3 +21,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+
+def home(request):
+    return render(request, 'home.html')
