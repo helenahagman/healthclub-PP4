@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary',
+    'cloudinary_storage',
     'personaltrainer',
     'django.contrib.auth',
     'django_summernote',
@@ -130,3 +131,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dbjnqkn07',
+    'API_KEY': '431769971726414',
+    'API_SECRET': 'tQzbeZqO7PTNVAW7AWK9iY0TE3c'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
