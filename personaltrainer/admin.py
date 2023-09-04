@@ -43,23 +43,3 @@ class BookingSessionAdmin(SummernoteModelAdmin):
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('name', 'username', 'email', 'phone_number')
     search_fields = ['name', 'username', 'email', 'phone_number']
-
-
-# @admin.register(CustomUser)
-# class UserProfileAdmin(admin.ModelAdmin):
-#    list_display = ('user',)
-#    search_fields = ('user__username', 'user__email', 'user__phone_number',)
-#    form = RegistrationForm
-
-#    def get_username(self, obj):
-#        return obj.user.username if obj.user else ""
-
-#    def get_email(self, obj):
-#        return obj.user.email if obj.user else ""
-
-#    def get_phone_number(self, obj):
-#        return obj.user.phone_number if obj.user else ""
-
-#    get_email.short_description = 'Email'
-#    get_username.short_description = 'Username'
-#    get_phone_number.short_description = 'Phone Number'
