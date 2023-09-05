@@ -25,6 +25,8 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('signup/', views.signup, name='signup'),
     path('', views.home, name='home'),
+    path('personaltrainer/', views.PersonalTrainerView.as_view(),
+         name='personaltrainer'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

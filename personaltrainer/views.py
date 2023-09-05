@@ -26,3 +26,7 @@ def signup(request):
 
 def home(request):
     return render(request, 'home.html')
+
+
+class PersonalTrainerView(generic.TemplateView):
+    template_name = 'personaltrainer.html'
