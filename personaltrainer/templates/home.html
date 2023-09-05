@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <!-- Main Content-->
-<section class="pt-5">
+<section class="pt-5" style="margin-top: 50px">
   <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-lg-6">
@@ -27,5 +27,57 @@
     </div>
   </div>
 </section>
+
+<!--Postcard layout by MDBootstrap-->
+<main class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+          <div
+            class="bg-image hover-overlay ripple"
+            data-mdb-ripple-color="light"
+          >
+            <img
+              src="https://res.cloudinary.com/dbjnqkn07/image/upload/v1692358157/healthclub-pp4/pexels-victor-freitas-841134_nublbx.jpg"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Personal Trainer</h5>
+            <p class="card-text">
+              Book sessions with a personal trainer dedicated to helping you
+              reach your goals.
+            </p>
+            <a href="" class="btn btn-primary">Book Session</a>
+          </div>
+        </div>
+      </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://res.cloudinary.com/dbjnqkn07/image/upload/v1692358156/healthclub-pp4/pexels-victor-freitas-703012_bdww8x.jpg" class="img-fluid" />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Members</h5>
+                <p class="card-text">
+                    Become a member today to receive the lates news, offers and much more.
+                </p>
+                <a href="" class="btn btn-primary">Log in</a>
+                <a href="" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</main>
 
 {%endblock%}
