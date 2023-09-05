@@ -42,8 +42,9 @@
       id="mainNav"
       style="z-index: 9999"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"
+      <div class="container px-4 px-lg-5 navbar-collapse">
+      <!--<div class="container-fluid">-->
+        <a class="navbar-brand w-100" href="{% url 'home' %}"
           ><!--<span class="brand">The<span class="red-o">Health</span>Club<span
                         class="thin">Project</span></span></span>--><img
             src="https://res.cloudinary.com/dbjnqkn07/image/upload/v1692358180/healthclub-pp4/logo_drdeem.jpg"
@@ -83,7 +84,7 @@
             </li>
             {% endif %}
           </ul>
-          <span class="navbar-text text-muted"> The Health Club Project </span>
+          <!--<span class="navbar-text text-muted"> The Health Club Project </span>-->
         </div>
       </div>
     </nav>
@@ -94,15 +95,37 @@
       {% endblock content %}
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-      <p class="m-0 text-center text-white">Made by Code Instituters</p>
-      <p class="m-0 text-center text-white">
-        Follow us: <i class="fab fa-facebook-square ms-3"></i>
-        <i class="fab fa-twitter-square ms-3"></i>
-        <i class="fab fa-instagram-square ms-3"></i>
-        <i class="fab fa-youtube-square ms-3"></i>
-      </p>
+   
+    <!-- Footer-->
+    <footer style="background-color: rgb(124, 130, 133);" class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="small text-center footer-text-color fst-italic">Copyright &copy; The Health Club
+                        Project. <br> The website is only intended for educational purposes and was created as the 4th
+                        project for the Code Institute. 2023</div>
+                </div>
+            </div>
+        </div>
     </footer>
   </body>
 </html>
