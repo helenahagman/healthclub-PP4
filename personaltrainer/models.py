@@ -38,3 +38,15 @@ class UserProfile(models.Model):
             return self.user.username
         else:
             return "Profile without user"
+
+
+class Booking(models.Model):
+    user = models.ForeignKey(BookingSession, on_delete=models.CASCADE)
+    service = models.ForeignKey(
+        'personaltrainer.Service', on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    status = models.CharField(max_length=20, default='pending')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.service.name} - {self.date} {self.time}"

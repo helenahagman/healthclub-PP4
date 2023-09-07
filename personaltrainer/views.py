@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate, get_user_model
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views import generic, View
-from .forms import SignUpForm
+
 
 User = get_user_model()
 
@@ -30,3 +31,23 @@ def home(request):
 
 class PersonalTrainerView(generic.TemplateView):
     template_name = 'personaltrainer.html'
+
+
+@login_required
+def book_service(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            return redirect('booking_success')
+    else:
+        form = BookingForm()
+
+    services = Service.objects.all()
+    return render(request, 'book.html', {'form': form, 'services': services})
+
+
+def booking_success(request):
+    return render(request, 'booking_success.html')

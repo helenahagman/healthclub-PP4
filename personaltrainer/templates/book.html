@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Book Now" />
+</form>
+
+<h2>Personal Trainer Sessions</h2>
+<ul>
+  {% for service in services %}
+  <li>{{ service.name }} - {{ service.description }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}

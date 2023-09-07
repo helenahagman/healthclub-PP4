@@ -1,8 +1,8 @@
+from .forms import BookingSessionForm, RegistrationForm
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django_summernote.admin import SummernoteModelAdmin
-from .forms import BookingSessionForm, RegistrationForm
 from .models import BookingSession, UserProfile
 
 
@@ -11,7 +11,7 @@ User = get_user_model()
 
 @admin.register(BookingSession)
 class BookingSessionAdmin(SummernoteModelAdmin):
-    form = BookingSessionForm
+    form = BookingForm
 
     list_display = ('user_name', 'email', 'user_phone_number', 'date', 'time')
     search_fields = ['user__username', 'email',

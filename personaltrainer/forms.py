@@ -2,7 +2,7 @@ from django import forms
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import BookingSession, UserProfile
+from .models import BookingSession, UserProfile, Booking
 
 
 class RegistrationForm(forms.ModelForm):
@@ -27,16 +27,10 @@ class SignUpForm(UserCreationForm):
         }
 
 
-class BookingSessionForm(forms.ModelForm):
+class BookingForm(forms.ModelForm):
     class Meta:
-        model = BookingSession
-        fields = '__all__'
-        widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}),
-        }
+        model = Booking
+        fields = ['service', 'date', 'time']
 
-    def clean_date(self):
-        date = self.cleaned_data.get('date')
-        if date and date < timezone.now().date():
-            raise forms.ValidationError("Past dates are not permitted.")
-        return date
+
+service = forms.ModelChoiceField(queryset=Service.objects.all())
