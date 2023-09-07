@@ -1,8 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin
 from django_summernote.admin import SummernoteModelAdmin
-# pylint: disable=no-member
 from .models import BookingSession, UserProfile, Booking, Service
 from .forms import BookingForm
 
@@ -31,7 +29,8 @@ class BookingSessionAdmin(SummernoteModelAdmin):
     user_name.short_description = 'Name'
 
     def user_phone_number(self, obj):
-        return obj.user.profile.phone_number if obj.user and obj.user.profile else ""
+        return (obj.user.profile.phone_number if obj.user and obj.user.profile
+                else "")
     user_phone_number.short_description = 'Phone Number'
 
     def save_form(self, request, form, change):
@@ -41,10 +40,10 @@ class BookingSessionAdmin(SummernoteModelAdmin):
         return obj
 
 
+@admin.register(User)
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('name', 'username', 'email', 'phone_number')
     search_fields = ['name', 'username', 'email', 'phone_number']
 
 
-admin.site.register(User, CustomUserAdmin)
 admin.site.register(Service)

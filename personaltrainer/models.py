@@ -15,11 +15,19 @@ class BookingSession(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.user.username)
+            self.slug = (
+                slugify(self.user.username)
+                if self.user and hasattr(self.user, 'username')
+                else 'no-username'
+            )
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.user.username
+        return (
+            self.user.username
+            if self.user and hasattr(self.user, 'username')
+            else "No User"
+        )
 
 
 class UserProfile(models.Model):
@@ -34,22 +42,35 @@ class UserProfile(models.Model):
     phone_number = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
-        if self.user:
-            return self.user.username
-        else:
-            return "Profile without user"
+        return (
+            self.user.username
+            if self.user and hasattr(self.user, 'username')
+            else "Profile without user"
 
 
 class Booking(models.Model):
-    user = models.ForeignKey(BookingSession, on_delete=models.CASCADE)
-    service = models.ForeignKey(
+    user=models.ForeignKey(BookingSession, on_delete=models.CASCADE)
+    service=models.ForeignKey(
         'personaltrainer.Service', on_delete=models.CASCADE)
-    date = models.DateField()
-    time = models.TimeField()
-    status = models.CharField(max_length=20, default='pending')
+    date=models.DateField()
+    time=models.TimeField()
+    status=models.CharField(max_length=20, default='pending')
 
     def __str__(self):
-        return f"{self.user.username} - {self.service.name} - {self.date} {self.time}"
+        user_username=(
+            self.user.user.username
+            if self.user and hasattr(self.user, 'user')
+            and hasattr(self.user.user, 'username')
+            else 'No User'
+        )
+        return (
+            f"{user_username} - {self.service.name} - "
+            f"{self.date} {self.time}"
+        )
+
+
+class ServiceManager(models.Manager):
+        pass
 
 
 class Service(models.Model):

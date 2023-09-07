@@ -32,6 +32,13 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['service', 'date', 'time']
+        widgets = {
+            'service': forms.Select(attrs={'class': 'form-control'}),
+            'date': forms.DateInput(attrs={'class': 'form-control',
+                                           'type': 'date'}),
+            'time': forms.DateInput(attrs={'class': 'form-control',
+                                           'type': 'time'}),
+        }
 
 
 service = forms.ModelChoiceField(queryset=Service.objects.all())
