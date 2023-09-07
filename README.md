@@ -1,260 +1,203 @@
-<h1>The Personal Trainer Project</h1>
-<p><img src="amiresponsive.JPG" alt="Am I Responsive"></li></p> #add link
+# The Personal Trainer Project
 
-<h4 href="https://github.com/helenahagman/the-personal-trainer-project/tree/main" > View The Personal Trainer Project on Github Pages </h3>
-<br>
-<h4 href="https://ptproject-ec6a8ad157bf.herokuapp.com/">Live Site</h4>
+![AmIResponsive](/add link/orImg.jpg)
 
-<h2> CONTENTS</h2>
-<h4>User Experience (UX)</h4>
-<ul>
-<li>Why this project</li>
-<li>Strategy</li>
-<li>User Stories</li>
-</ul>
+![View The Personal Trainer Project on Github Pages](//github.com/helenahagman/the-personal-trainer-project/tree/main)
 
-<h4>Design</h4>
-<ul>
-<li>Imagery</li>
-<li>Wire Frames</li>
-<li>Features</li>
-<li>Accessability</li>
-</ul>
+![Live site](//ptproject-ec6a8ad157bf.herokuapp.com/)
 
-<h4>Technology</h4>
-<ul>
-<li>Frameworks, Libraries & Programs Used</li>
-</ul>
+## CONTENTS
 
-<h4>Testing</h4>
-<ul>
-<li>W3C Validator</li>
-<li>Bugs</li>
-<li>Testing User Stories</li>
-<li>Lighthouse</li>
-  <ul>
-<li>Index Page</li>
-<li>Personal Trainer Page</li>
-<li>Member Page</li></li>
-<li>Testing features and functions</li></ul>
-</ul>
+- [The Personal Trainer Project](#the-personal-trainer-project)
+  - [CONTENTS](#contents)
+  - [Why this project](#why-this-project)
+  - [Strategy](#strategy)
+    - [Target audiences that the website will focus on:](#target-audiences-that-the-website-will-focus-on)
+      - [Roles](#roles)
+      - [Demographics](#demographics)
+      - [Psychographics](#psychographics)
+      - [User needs:](#user-needs)
+      - [Client needs:](#client-needs)
+      - [Content Requirements](#content-requirements)
+      - [Functionality](#functionality)
+    - [Link to KANBAN Board with User Stories on Trello:](#link-to-kanban-board-with-user-stories-on-trello)
+  - [Design](#design)
+    - [Imagery](#imagery)
+    - [Wire Frames](#wire-frames)
+    - [Features](#features)
+      - [All main pages:](#all-main-pages)
+      - [Start/about page:](#startabout-page)
+      - [Personal Trainer Page:](#personal-trainer-page)
+      - [Member Page:](#member-page)
+  - [Accessibility](#accessibility)
+  - [Technology](#technology)
+    - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
+  - [Testing](#testing)
+    - [Deployment](#deployment)
+      - [Deployment to heroku](#deployment-to-heroku)
+      - [Credits](#credits)
+    - [Known unsolved bugs](#known-unsolved-bugs)
+    - [Credits \& Inspiration](#credits--inspiration)
 
-<h4>Deployment</h4>
-<ul>
-<li>Deployment to Heroku:</li>
-<ol> <li>Click on Account Settings</li>
-<li>Copy the API key.</li>
-<li>Enter the command: heroku_config , and enter the API key</li>
-<li>Enter your heroku username</li>
-<li>Enter the API key</li>
-</ol>
-</ul>
+## Why this project
+I built this page for my 4th project in the Code Institute course for the Diploma in Full Stack Software Development. I wanted to build a good-looking website where the functionality for online booking of Personal Trainer sessions would be possible and where both the user and the owner of the site can get the information they need. As building an online booking for Personal Trainer Sessions will be one of my projects for my current job as well this fall, I used the opportunity to talk to my boss for user stories and planning of the project. Key points that would be crucial for the real site have been a part of this project.
 
-<h4>Credits</h4>
-<ul>
-<li>Code Used</li>
-<li>Images</li>
-<li>Acknowledgments</li>
+## Strategy
+### Target audiences that the website will focus on:
 
-</ul>
+#### Roles
+- Persons who want to get tips from a Personal Trainer
+- Persons who are interested in gym exercise
+- New users that are not yet registered
+- Current users that are registered
 
-<h2> CONTENTS</h2>
-<h3> Why this project</h3>
-<p>I built this page for my 4th project in the Code Institute course for the Diploma in Full Stack Software Development.<br>
-I wanted to build a good looking website where the functionality for online booking of Personal Trainer sessions would be possible and where both the user and the owner of the site can get the information they need. As building an online booking for Personal Trainer Sessions will be one of my projects for my current job as well this fall I used the opportunity to talk to my boss for user stories and planning of the project. Key points that would be crutial for the real site has been a part of this project.<br></p>
+#### Demographics
+- Persons in the age over 18 years
 
-<h3>Strategy</h3>
-<h4>Target audiences that the website will focus on:</h4>
-<h5>Roles</h5>
-<ul>
-<li>Persons who want to get tips from a Personal Trainer</li>
-<li>Persons who are interested in gym exercise</li>
-<li>New users that are not yet registered</li>
-<li>Current users that are registered</li>
-</ul>
-<h5>Demographics</h5>
-<ul>
-<li>Persons in the age over 18 years</li>
-</ul>
+#### Psychographics
+- Persons who want to:
+  - Get in general shape
+  - Get stronger
+  - Lose weight
+  - Train for a specific goal (ex a competition)
+  - Increase their stamina
+  - Persons who are new to training in a gym
+  - Persons who want to get tips from a Personal Trainer
 
-<h5>Psychographics</h5>
-<ul><li>Persons who want to:</li>
-<ul>
-<li>Get in general shape</li>
-<li>Get stronger</li>
-<li>Loose weight</li>
-<li>Train for a specific goal (ex a competition)</li>
-<li>Increase their stamina</li>
-<li>Persons who are new to training in a gym</li>
-<li>Persons who want to get tips from a Personal Trainer</li>
-</ul></ul>
+#### User needs:
+- Login as a current user
+- Register as a new user
+- See available personal trainer sessions
+- Get information on what is offered on the site
+- Book personal trainer sessions
+- Cancel booked sessions
+- Sign up for membership
+- Get in contact
+- Edit registered user information
 
-<h5>User needs:</h5>
-<ul>
-<li>Login as a current user</li>
-<li>Register as a new user</li>
-<li>See available personal trainer sessions</li>
-<li>Get information on what is offered on the site</li>
-<li>Book personal trainer sessions</li>
-<li>Cancel booked sessions
-<li>Sign up for membership</li>
-<li>Get in contact</li>
-<li>Edit registered user information</li>
-  </ul>
+#### Client needs:
+- Provide information about the company
+- Offer Memberships
+- Offer Bookable Personal Trainer Sessions
+- Administrator log in
+- Communicate with users/customers that have questions
+- Send emails/sms to registered users
+- See registered users
+- See booked sessions
 
-<h5>Client needs:</h5>
-<ul>
-<li>Provide information about the company</li>
-<li>Offer Memberships</li>
-<li>Offer Bookable Personal Trainer Sessions</li>
-<li>Administrator log in</li>
-<li>Communicate with users/customers that have questions</li>
-<li>Send emails/sms to registered users</li>
-<li>See registered users</li>
-<li>See booked sessions</li>
-</ul>
+#### Content Requirements
+- Images that contribute to what the site is offering
+- Explanatory texts
+- Registration possibilities
+- Log in possibilities
+- Log out possibilities
+- Online booking for Personal Trainer Sessions
+- Contact
 
-<h5>Content Requirements</h5>
-<ul>
-<li>Images that contribute to what the site is offering</li>
-<li>Explanatory texts</li>
-<li>Registration possibilities</li>
-<li>Log in possibilities</li>
-<li>Log out possibilities</li>
-<li>Online booking for Personal Trainer Sessions</li>
-<li>Contact</li>
-</ul>
+#### Functionality
+- Register as a new user
+- Login as a current user
+- Log out as a logged-in user
+- Possibility to choose a custom username and password
+- Easy navigation on the site
+- Book available sessions
+- Get in contact
+- Send customized messages to registered customers
+- Cancel a booked session
+- Manage customer database
 
-<h5>Functionality</h5>
-<ul>
-<li>Register as new user</li>
-<li>Login as a current user</li>
-<li>Log out as a logged in user</li>
-<li>Possibility to choose custom username and password</li>
-<li>Easy navigation on the site</li>
-<li>Book available sessions</li>
-<li>Get in contact</li>
-<li>Send customized messages to registered customers</li>
-<li>Cancel a booked session</li>
-<li>Manage customer database</li>
-</ul>
+### Link to KANBAN Board with User Stories on Trello:
+[Trello KANBAN Board](https://trello.com/b/yxkUuMp3/kanban-board)
 
-<h3>Link to KANBAN Board with User Stories on Trello:</h3>
-<a href="https://trello.com/b/yxkUuMp3/kanban-board">Trello KANBAN Board</a>
+## Design
+### Imagery
+The images for the site have been downloaded from [Pexels Free Images](https://www.pexels.com/sv-se/).
 
-<h2>Design</h2>
+### Wire Frames
+Wireframes were created using Miro and were created for mobile, tablet, and desktop views.
+[Miro Wire Frames](https://miro.com/app/board/uXjVM94tSQs=/?share_link_id=555048984575)
 
-<h3>Imagery</h3>
-<h5>The images for the site have been downloaded from Pexels free images.</h5>
-<a href="https://www.pexels.com/sv-se/">Pexels Free Images</a>
+### Features
+The website contains three main pages: start/about page, Personal Trainer page, Members page. All main pages are accessible from the navigation menu on the top of the page.
 
-<h3>Wire Frames</h3>
-<h5>Wireframes were created using Miro and was created for mobile, tablet and desktop views.</h5>
-<a href=” https://miro.com/app/board/uXjVM94tSQs=/?share_link_id=555048984575” >Miro Wire Frames</a>
+#### All main pages:
+- Responsive navigation menu on the top of the page to be able to navigate to the three main pages. The links to the pages are placed on the right side of the navigation bar, to the left a logo with the project name is placed.
+- In the footer, social media links to Facebook and Instagram are placed in the form of icons.
 
-<h3>Features</h3>
-<p>The website contains of three main pages: start/about page, Personal Trainer page, Members page. All main pages are accessible from the navigation menu on the top of the page.</p>
-<li>All main pages:</li>
-<ul>
-  <li>Responsive navigation menu on the top of the page to be able to navigate to the three main pages. The links to the pages are placed on the right side of the navigation bar, to the left a logo with the project name is placed.</li>
-  <li>In the footer social media links to facebook and instagram are placed in the form of icons.</li>
-</ul>
-<li>Start/about page:</li>
-<ul>
-  <li>Short descriptive information along with an image followed by two postcards with link to Personal Trainer page and the Member Page.</li>
-  </ul>
-<li>Personal Trainer Page:</li>
-<ul>
-  <li>Short descriptive information along with an image and a button to book session, below that two postcards with link to book sessions and the Member Page</li>
-</ul>
-  <li>Member Page:</li>
-<ul>
-  <li>Short descriptive information along with an image, below that two postcards with link to the contact form and the login and register form</li>
-</ul>
+#### Start/about page:
+- Short descriptive information along with an image followed by two postcards with a link to the Personal Trainer page and the Member Page.
 
-<h3>Accessability</h3>
-<p>Throughout the process of building the website I have tried to think of the accessibility to make it as user friendly as possible. I have used the best of my knowledge to:
-<ul>
-  <li>Use semantic HTML</li>
-  <li>Sufficient color contrasts</li>
-  <li>Images that fit the purpose</li>
-  <li>Hoover function on the menue items and buttons</li>
-  <li>Icons for social media links insted of text</li>
-  <li>Use the same layout on all main pages</li>
-</ul></p>
+#### Personal Trainer Page:
+- Short descriptive information along with an image and a button to book a session, below that two postcards with a link to book sessions and the Member Page.
 
-<h2>Technology</h2>
+#### Member Page:
+- Short descriptive information along with an image, below that two postcards with a link to the contact form and the login and register form.
 
-<h3>Frameworks, Libraries & Programs Used</h3>
-<ul>
-  <li>HTML, CSS, JavaScript</li>
-  <li>Django, Flask</li>
-  <li>GitHub - save & store website files</li>
-  <li>CodeAnywhere - codespace</li>
-  <li>Bootstrap - framework</li>
-  <li>Favicon - icons</li>
-  <li>ElephantSQL - database</li>
-  <li>Heroku - deployment</li>
-  <li>EmailJS - contact</li>
-  <li>Trello - KANBAN Board</li>
-  <li>Miro - wireframes</li>
-  <li>Pexels - images</li>
-  <li></li>
-</ul>
+## Accessibility
+Throughout the process of building the website, I have tried to think of accessibility to make it as user-friendly as possible. I have used the best of my knowledge to:
+- Use semantic HTML
+- Ensure sufficient color contrasts
+- Use images that fit the purpose
+- Add hover functionality on menu items and buttons
+- Use icons for social media links instead of text
+- Maintain the same layout on all main pages
 
-<h2>Testing</h2> 
-<p>Testing features, accessibility, links, responsiveness have been done throughout the project and after every step of the way tests have been performed to make sure that the new inserts has been working correctly and corrected thereafter.<br> For complete view of testing please see <a href="/workspaces/healthclub-PP4/TESTING.md">TESTING.md</a></p> 
-<ul>
+## Technology
+### Frameworks, Libraries & Programs Used
+- HTML, CSS, JavaScript
+- Django, Flask
+- GitHub - save & store website files
+- CodeAnywhere - codespace
+- Bootstrap - framework
+- Favicon - icons
+- ElephantSQL - database
+- Heroku - deployment
+- EmailJS - contact
+- Trello - KANBAN Board
+- Miro - wireframes
+- Pexels - images
+  
+
+## Testing
+Testing features, accessibility, links, responsiveness have been done throughout the project and after every step of the way tests have been performed to make sure that the new inserts has been working correctly and corrected thereafter. 
+For complete view of testing please see <a href="/workspaces/healthclub-PP4/TESTING.md">TESTING.md
 
 
-<h4>Deployment</h4>
-<a>Deployment to heroku</a>
-<ol>
-<li>Account settings</li>
-<li>Copy the API key</li>
-<li>Enter the command: heroku_config , and enter the API key</li>
-<li>Enter heroku username</li>
-<li>Enter the API key</li>
-</ol>
-
-<h4>Credits</h4>
-<ul>
-<li>Code Used</li>
-<li>Images</li>
-<li>Acknowledgments</li>
-
-</ul>
-
- <h3>Known unsolved bugs</h3>
-<br>
-<li>
-<p>App looks strange on live site</p>
-<p>Menu link on smaller screens dont open</p>
-<p>Images on live site</p>
-<p>Book session button on Index page</p>
-<p>Link to Sign in on Register page</p>
-<p>Link to Register on Sign in page</p>
-<p>Contact post do not work on live site</p>
-</li>
-<br>
-
-<h3>Credits & Inspiration</h3>
-
-<p>Sites and code used for inspiration and test on this project:</p>
-
-<li><a href="https://www.w3schools.com/python/default.asp">W3School Pyhton Tutorial</a></li>
-<p>Problem solvning</p>
-<li><a href="https://www.python.org/about/help/">Pyhton.org</a></li>
-<p>Problem solvning</p>
-
-<li><a href="https://mdbootstrap.com/snippets/standard/mdbootstrap/2515556">Bootstrap</a></li>
-<p>2 column template from MDBootstrap</p>
-<li><a href="https://www.emailjs.com/">EmailJS</a></li>
-<p>API connection for messages</p>
-<li><a href="https://www.digitalocean.com">DigitalOcean</a></li>
-<p>Problem solving and ideas</p>
-<br>
-<p>I used the walkthrough in the Codeinstitute section "Startbootstrap clean-blog URL change" to add the clean-blog theme from bootstrap to style my pages.</p>
-<p>Thank you to The Code Institute for material, instructions and connection to the community in Slack</p>
+### Deployment
+#### Deployment to heroku
+1. Account settings
+2. Copy the API key
+3. Enter the command: heroku_config , and enter the API key
+4. Enter heroku username
+5. Enter the API key
 
 
+#### Credits
+- Code Used
+- Images
+- Acknowledgments
+
+
+### Known unsolved bugs
+
+* App looks strange on live site
+* Menu link on smaller screens dont open
+* Images on live site
+* Book session button on Index page
+* Link to Sign in on Register page
+* Link to Register on Sign in page
+* Contact post do not work on live site
+
+
+### Credits & Inspiration
+
+Sites and code used for inspiration and test on this project:
+
+* <a href="https://www.w3schools.com/python/default.asp">W3School Pyhton Tutorial</a> * Problem solving
+* <a href="https://www.python.org/about/help/">Pyhton.org</a> * Problem solving
+* <a href="https://mdbootstrap.com/snippets/standard/mdbootstrap/2515556">Bootstrap</a> * Templates: 2 columns and PostCard from MDBootstrap
+* <a href="https://www.emailjs.com/">EmailJS</a> * API connection for messages
+* <a href="https://www.digitalocean.com">DigitalOcean</a> * Problem solving and ideas
+
+* I used the walkthrough in the Codeinstitute section "Startbootstrap clean-blog URL change" to add the clean-blog theme from bootstrap to style my pages.
+* Thank you to The Code Institute for material, instructions and connection to the community in Slack

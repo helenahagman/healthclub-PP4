@@ -3,6 +3,8 @@ from django.contrib.auth import login, authenticate, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views import generic, View
+from .forms import SignUpForm, BookingForm
+from .models import Service
 
 
 User = get_user_model()
